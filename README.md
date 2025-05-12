@@ -41,8 +41,7 @@ The extension will:
 ### 1. Before Fixing Dependencies
 
 Before running the extension, you may encounter issues where the dependencies in your `pubspec.yaml` file are incompatible, preventing your Flutter project from running or building properly.
-
-![Before Fixing Dependencies](https://github.com/user-attachments/assets/154af9f0-f415-439a-81ea-9ad6aa7da46a)
+<img width="1440" alt="Image" src="https://github.com/user-attachments/assets/f19d1121-9e97-45f8-b604-da739b6cb408" />
 
 ### 2. Running the Extension
 
@@ -58,5 +57,5 @@ To run the extension, follow these steps:
 ### 3. After Fixing Dependencies
 
 Once the extension has fixed the dependency conflicts, your `pubspec.yaml` will be updated with compatible versions of the dependencies.
-<img width="1440" alt="Image" src="https://github.com/user-attachments/assets/f19d1121-9e97-45f8-b604-da739b6cb408" />
+<img width="1440" alt="Image" src="https://github.com/user-attachments/assets/154af9f0-f415-439a-81ea-9ad6aa7da46a" />
 
