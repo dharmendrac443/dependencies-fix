@@ -1,71 +1,38 @@
-# flutter-dep-fixer README
+# Flutter Dependency Updater for VS Code
 
-This is the README for your extension "flutter-dep-fixer". After writing up a brief description, we recommend including the following sections.
+## 🔧 Features
 
-## Features
+This VS Code extension automatically:
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- Scans your `pubspec.yaml` for outdated dependencies
+- Fetches the latest versions from [pub.dev](https://pub.dev)
+- Updates the versions inline
+- Highlights updated lines with a soft green background
+- Runs `flutter pub get` automatically after update
 
-For example if there is an image subfolder under your extension project workspace:
+## 🧠 Smart Conflict Fixing
 
-\!\[feature X\]\(images/feature-x.png\)
+If your `pubspec.yaml` includes a version that:
+- Doesn’t exist on pub.dev
+- Is incorrectly typed (e.g., `^2.9.99` when the latest is `^2.1.0`)
+- Refers to a yanked version
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+The extension will **automatically correct it** by replacing it with the latest valid version from pub.dev.
 
-## Requirements
+## ✨ Inline Highlighting
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+Updated lines in `pubspec.yaml` are **temporarily highlighted** in light green, making it easy to see what has changed. The highlight disappears after 5 seconds.
 
-## Extension Settings
+## 🚀 How to Use
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+1. Open your Flutter project in VS Code.
+2. Make sure your project has a valid `pubspec.yaml` file.
+3. Press `Ctrl + Shift + P` (or `Cmd + Shift + P` on macOS).
+4. Search:  Auto-fix Flutter Dependency Conflicts
 
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+The extension will:
+- Parse your dependencies and dev_dependencies.
+- Check each package’s latest version from pub.dev.
+- Update outdated versions (preserving the `^` symbol).
+- Highlight the updated lines.
+- Run `flutter pub get`.
