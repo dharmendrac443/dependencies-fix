@@ -36,3 +36,27 @@ The extension will:
 - Update outdated versions (preserving the `^` symbol).
 - Highlight the updated lines.
 - Run `flutter pub get`.
+
+## Screenshots of how to use
+### 1. Before Fixing Dependencies
+
+Before running the extension, you may encounter issues where the dependencies in your `pubspec.yaml` file are incompatible, preventing your Flutter project from running or building properly.
+
+![Before Fixing Dependencies](https://github.com/user-attachments/assets/154af9f0-f415-439a-81ea-9ad6aa7da46a)
+
+### 2. Running the Extension
+
+To run the extension, follow these steps:
+
+1. Open the **Command Palette** in VS Code:
+   - On macOS: `Cmd + Shift + P`
+   - On Windows/Linux: `Ctrl + Shift + P`
+   
+2. Search for ` Auto-fix Flutter Dependency Conflicts` and select it.
+<img width="1440" alt="Image" src="https://github.com/user-attachments/assets/0a1f6deb-cdab-4b65-99d9-96ae124ba962" />
+
+### 3. After Fixing Dependencies
+
+Once the extension has fixed the dependency conflicts, your `pubspec.yaml` will be updated with compatible versions of the dependencies.
+<img width="1440" alt="Image" src="https://github.com/user-attachments/assets/f19d1121-9e97-45f8-b604-da739b6cb408" />
+
